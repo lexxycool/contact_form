@@ -68,36 +68,37 @@
         <title>Contact Us</title>
         <link rel='stylesheet' href='https://bootswatch.com/4/cosmo/bootstrap.min.css'>
     </head>
-    <body>
-         <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
-         <div class='container'>
-                  <div class='navbar-header'>
-                       <a class='navbar-brand' href='index.php'>Contact Form</a>
-                  </div>
-                 
-                  <?php if($msg != ''): ?>
-                      <div class='alert <?php echo $msgClass; ?>'>
-                           <?php echo $msg; ?>
-                      </div>
-                  <?php endif; ?>  
-              </div>
-         </nav>
-         <form method='post' action='<?php echo $_SERVER['PHP_SELF'] ?>'>
-                <div class='form-group'>
-                    <label>Name</label>
-                    <input type='text' name='name' class='form-control' value='<?php echo isset($_POST['name']) ? $name : '' ; ?>' >
-                </div>
-                <div class='form-group'>
-                    <label>Email</label>
-                    <input type='text' name='email' class='form-control' value='<?php echo isset($_POST['email']) ? $email : '' ; ?>' >
-                </div>
-                <div class='form-group'>
-                    <label>Message</label>
-                    <textarea name='message' class='form-control' placeholder='your message here ...' ><?php echo isset($_POST['message']) ? $message : '' ;  ?></textarea>
-                </div>
-                <br>
-                <button type='submit' name='submit' class='btn btn-primary'>Submit</button>
-                <button type='reset' name='clear' class='btn btn-primary'>Clear</button>
-         </form>
+    <body> 
+        <div class='container'>
+            <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+                    <div class='navbar-header'>
+                        <a class='navbar-brand' href='index.php'>Contact Form</a>
+                    </div>
+                    
+                    <?php if($msg != ''): ?>
+                        <div class='alert <?php echo $msgClass; ?>'>
+                            <?php echo $msg; ?>
+                        </div>
+                    <?php endif; ?>  
+                
+            </nav>
+            <form method='post' action='<?php echo $_SERVER['PHP_SELF'] ?>'>
+                    <div class='form-group'>
+                        <label>Name</label>
+                        <input type='text' name='name' class='form-control' value='<?php echo isset($_POST['name']) ? $name : '' ; ?>' >
+                    </div>
+                    <div class='form-group'>
+                        <label>Email</label>
+                        <input type='text' name='email' class='form-control' value='<?php echo isset($_POST['email']) ? $email : '' ; ?>' >
+                    </div>
+                    <div class='form-group'>
+                        <label>Message</label>
+                        <textarea name='message' class='form-control' placeholder='your message here ...' ><?php echo isset($_POST['message']) ? $message : '' ;  ?></textarea>
+                    </div>
+                    <br>
+                    <button type='submit' name='submit' class='btn btn-primary'>Submit</button>
+                    <button type='reset' name='clear' class='btn btn-primary'>Clear</button>
+            </form>
+        </div>
     </body>
 </html>
